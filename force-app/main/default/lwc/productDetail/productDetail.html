@@ -1,0 +1,128 @@
+<template>
+    <lightning-card title="Product Details" icon-name="custom:custom63">
+        <template if:true={product}>
+            <div class="slds-m-around_medium">
+                <!-- General Information Section -->
+                <div class="slds-m-bottom_medium">
+                    <h2 class="slds-text-heading_small slds-theme_shade slds-p-around_xx-small">General Information</h2>
+                    <lightning-layout multiple-rows>
+                        <lightning-layout-item size="6" class="slds-p-horizontal_small">
+                            <div class="slds-grid slds-wrap slds-m-bottom_x-small">
+                                <span class="slds-text-title_bold slds-m-right_small">Product ID:</span>
+                                <lightning-formatted-text value={product.product_id}></lightning-formatted-text>
+                            </div>
+                            <div class="slds-grid slds-wrap slds-m-bottom_x-small">
+                                <span class="slds-text-title_bold slds-m-right_small">Price:</span>
+                                <lightning-formatted-text value={product.price}></lightning-formatted-text>
+                            </div>
+                            <div class="slds-grid slds-wrap slds-m-bottom_x-small">
+                                <span class="slds-text-title_bold slds-m-right_small">Price % Change (24h):</span>
+                                <lightning-formatted-text value={product.price_percentage_change_24h}></lightning-formatted-text>
+                            </div>
+                            <div class="slds-grid slds-wrap slds-m-bottom_x-small">
+                                <span class="slds-text-title_bold slds-m-right_small">Volume (24h):</span>
+                                <lightning-formatted-text value={product.volume_24h}></lightning-formatted-text>
+                            </div>
+                            <div class="slds-grid slds-wrap slds-m-bottom_x-small">
+                                <span class="slds-text-title_bold slds-m-right_small">Volume % Change (24h):</span>
+                                <lightning-formatted-text value={product.volume_percentage_change_24h}></lightning-formatted-text>
+                            </div>
+                        </lightning-layout-item>
+                        <lightning-layout-item size="6" class="slds-p-horizontal_small">
+                            <div class="slds-grid slds-wrap slds-m-bottom_x-small">
+                                <span class="slds-text-title_bold slds-m-right_small">Status:</span>
+                                <lightning-formatted-text value={product.status}></lightning-formatted-text>
+                            </div>
+                            <div class="slds-grid slds-wrap slds-m-bottom_x-small">
+                                <span class="slds-text-title_bold slds-m-right_small">Product Type:</span>
+                                <lightning-formatted-text value={product.product_type}></lightning-formatted-text>
+                            </div>
+                            <div class="slds-grid slds-wrap slds-m-bottom_x-small">
+                                <span class="slds-text-title_bold slds-m-right_small">Mid Market Price:</span>
+                                <lightning-formatted-text value={product.mid_market_price}></lightning-formatted-text>
+                            </div>
+                            <div class="slds-grid slds-wrap slds-m-bottom_x-small">
+                                <span class="slds-text-title_bold slds-m-right_small">Base Name:</span>
+                                <lightning-formatted-text value={product.base_name}></lightning-formatted-text>
+                            </div>
+                            <div class="slds-grid slds-wrap slds-m-bottom_x-small">
+                                <span class="slds-text-title_bold slds-m-right_small">Quote Name:</span>
+                                <lightning-formatted-text value={product.quote_name}></lightning-formatted-text>
+                            </div>
+                        </lightning-layout-item>
+                    </lightning-layout>
+                </div>
+                
+                <!-- Increment and Size Information Section -->
+                <div class="slds-m-bottom_medium">
+                    <h2 class="slds-text-heading_small slds-theme_shade slds-p-around_xx-small">Increment and Size Information</h2>
+                    <lightning-layout multiple-rows>
+                        <lightning-layout-item size="6" class="slds-p-horizontal_small">
+                            <div class="slds-grid slds-wrap slds-m-bottom_x-small">
+                                <span class="slds-text-title_bold slds-m-right_small">Base Increment:</span>
+                                <lightning-formatted-text value={product.base_increment}></lightning-formatted-text>
+                            </div>
+                            <div class="slds-grid slds-wrap slds-m-bottom_x-small">
+                                <span class="slds-text-title_bold slds-m-right_small">Quote Increment:</span>
+                                <lightning-formatted-text value={product.quote_increment}></lightning-formatted-text>
+                            </div>
+                            <div class="slds-grid slds-wrap slds-m-bottom_x-small">
+                                <span class="slds-text-title_bold slds-m-right_small">Base Min Size:</span>
+                                <lightning-formatted-text value={product.base_min_size}></lightning-formatted-text>
+                            </div>
+                            <div class="slds-grid slds-wrap slds-m-bottom_x-small">
+                                <span class="slds-text-title_bold slds-m-right_small">Base Max Size:</span>
+                                <lightning-formatted-text value={product.base_max_size}></lightning-formatted-text>
+                            </div>
+                        </lightning-layout-item>
+                        <lightning-layout-item size="6" class="slds-p-horizontal_small">
+                            <div class="slds-grid slds-wrap slds-m-bottom_x-small">
+                                <span class="slds-text-title_bold slds-m-right_small">Quote Min Size:</span>
+                                <lightning-formatted-text value={product.quote_min_size}></lightning-formatted-text>
+                            </div>
+                            <div class="slds-grid slds-wrap slds-m-bottom_x-small">
+                                <span class="slds-text-title_bold slds-m-right_small">Quote Max Size:</span>
+                                <lightning-formatted-text value={product.quote_max_size}></lightning-formatted-text>
+                            </div>
+                            <div class="slds-grid slds-wrap slds-m-bottom_x-small">
+                                <span class="slds-text-title_bold slds-m-right_small">Quote Currency ID:</span>
+                                <lightning-formatted-text value={product.quote_currency_id}></lightning-formatted-text>
+                            </div>
+                            <div class="slds-grid slds-wrap slds-m-bottom_x-small">
+                                <span class="slds-text-title_bold slds-m-right_small">Base Currency ID:</span>
+                                <lightning-formatted-text value={product.base_currency_id}></lightning-formatted-text>
+                            </div>
+                        </lightning-layout-item>
+                    </lightning-layout>
+                </div>
+                
+                <!-- Additional Information Section -->
+                <div>
+                    <h2 class="slds-text-heading_small slds-theme_shade slds-p-around_xx-small">Additional Information</h2>
+                    <lightning-layout multiple-rows>
+                        <lightning-layout-item size="12" class="slds-p-horizontal_small">
+                            <div class="slds-grid slds-wrap slds-m-bottom_x-small">
+                                <span class="slds-text-title_bold slds-m-right_small">Alias:</span>
+                                <lightning-formatted-text value={product.alias}></lightning-formatted-text>
+                            </div>
+                            <div class="slds-grid slds-wrap slds-m-bottom_x-small">
+                                <span class="slds-text-title_bold slds-m-right_small">Alias To:</span>
+                                <lightning-formatted-text value={product.alias_to}></lightning-formatted-text>
+                            </div>
+                        </lightning-layout-item>
+                    </lightning-layout>
+                </div>
+            </div>
+        </template>
+        <template if:true={error}>
+            <div class="slds-m-around_medium">
+                <p class="slds-text-color_error">{error}</p>
+            </div>
+        </template>
+        <template if:true={isLoading}>
+            <div class="slds-m-around_medium">
+                <lightning-spinner alternative-text="Loading" size="medium"></lightning-spinner>
+            </div>  
+        </template>
+    </lightning-card>
+</template>

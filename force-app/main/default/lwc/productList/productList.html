@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title="Product List" icon-name="custom:custom63">
+        <div class="slds-m-around_medium">
+            <lightning-datatable
+                key-field="product_id"
+                data={products}
+                columns={columns}
+                max-row-selection="1"
+                onrowselection={handleRowSelection}
+                >
+            </lightning-datatable>
+        </div>
+    </lightning-card>
+</template>
